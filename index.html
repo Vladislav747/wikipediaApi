@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wikipedia API</title>
+  <!-- CSS Framework Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- CSS Custom-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/pagination.css">
+</head>
+
+<body class="bg-dark text-white">
+  <header class="bg-secondary text-center p-3 mb-5">
+    <h1>Wikipedia API</h1>
+  </header>
+
+  <div class="themePresets">
+    <span class="title">Смена тем оформления</span>
+    <div class="typesThemes">
+      <span class="click_block">
+        <span style="background-color: #de002b;"></span>
+      </span>
+      <span class="click_block">
+
+        <span style="background-color: #188b30;"></span>
+
+      </span>
+      <span class="click_block">
+        <span style="background-color: #ffad00;"></span>
+      </span>
+      <span class="click_block">
+        <span style="background-color: #007bff;"></span>
+      </span>
+    </div>
+
+    <div class="btn btn-secondary btnTheme showPanel">
+      Показать/Скрыть
+    </div>
+
+  </div>
+  <div class="container text-center">
+
+    <!-- Word & Input -->
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <h2 class="display-2 mb-5" id="current-word">Введите ваш запрос</h2>
+
+        <div class="row">
+          <div class="col-md-8">
+            <input type="text" class="form-control form-control-lg" placeholder="Введите ваш запрос тут" id="word-input"
+              autocomplete="on" autofocus>
+          </div>
+
+          <div class="col-md-4">
+            <button type="button" class="btn btn-primary" id="btnSearch">Найти</button>
+          </div>
+        </div>
+
+
+        <!-- Параметры отображения запроса  -->
+        <div class="row displaySettings">
+
+          <!-- сортировка -->
+          <div class="sort">
+            <button class="btn btn-primary btnSort" onclick="sortResults()">Сортировка по дате</button>
+          </div>
+
+          <!-- Количество элементов на странице -->
+          <div class="displayResults">
+
+            <select class="custom-select selectResults">
+              <option selected>Выберите количество статей на странице</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+
+        </div>
+        <!-- Loading Indicator -->
+        <div class="loading-indicator hidden"></div>
+        <!-- Result Query -->
+        <div class="mt-3 resultQuery hidden"></div>
+        <!-- Paging -->
+        <div class="navigation">
+          <div class="previous-page prevnext"></div>
+          <div class="navigation-pages">
+          </div>
+          <div class="next-page prevnext"></div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="row mt-5">
+          <div class="col-md-12">
+            <div class="card card-body bg-secondary text-white">
+              <h5>Инструкции</h5>
+              <p>Введите ваш запрос в поле для поиска по википедии</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+  <script src="js/wikipedia.js"></script>
+  <script src="js/themePresets.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

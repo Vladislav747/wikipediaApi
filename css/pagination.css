@@ -1,0 +1,32 @@
+.navigation{
+
+    display: inline-block;  
+    margin: 20px;
+}
+
+.navigation-pages {
+    display: inline-block;
+  }
+  
+  .navigation a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    background-color: #fff;
+
+  }
+  
+  .navigation-pages a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .prevnext{
+      display: inline-block;
+  }
+
+  .navigation a:hover:not(.active) {background-color: #ccc;}

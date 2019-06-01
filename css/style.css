@@ -1,0 +1,127 @@
+/* Display Results */
+
+#btnSearch {
+    height: 100%;
+    width: 70%;
+}
+
+.snippetWikipedia {
+    margin-bottom: 40px;
+}
+
+.displaySettings {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+}
+
+.sort {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.displayResults {
+    flex: 2;
+    
+}
+
+.selectResults {
+    margin-top: 20px;
+}
+
+.btnSort {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Theme Chooser */
+.themePresets {
+    padding: 20px;
+    position: absolute;
+    width: 200px;
+    background: #fff;
+    height: 500px;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    left: -210px;
+    transition: 1s linear;
+}
+
+.showPanel {
+    position: absolute;
+    left: 220px;
+    top: 250px;
+}
+
+.themePresets.show {
+    left: 0px;
+    transition: 1s linear;
+}
+
+span.title {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: black;
+}
+
+.typesThemes {
+    margin: 25px 25px 0 0;
+}
+
+div.typesThemes>span{
+    
+    margin: 25px 25px 0 0;
+    display: block;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #e2e2e2;
+    padding: 5px;
+}
+
+div.typesThemes>span span{
+    
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/*Spinner Loading*/
+
+.loading-indicator {
+    width: 76px;
+    height: 76px;
+    border: 8px solid #0052ec;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: loader-rotate 1s linear infinite;
+    margin: 40px auto 0;
+}
+
+.loading-indicator::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #0052ec;
+    border-radius: 50%;
+    top: -1px;
+    left: 33px;
+}
+
+@keyframes loader-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
